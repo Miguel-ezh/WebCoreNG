@@ -13,6 +13,8 @@ namespace WebCoreNG.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            var test = new int[] { 4, 5, 6 };
+
             return new string[] { "value1", "value2" };
         }
 
@@ -27,6 +29,7 @@ namespace WebCoreNG.Controllers
         [HttpPost]
         public void Post([FromBody]string value)
         {
+            
         }
 
         // PUT api/values/5
