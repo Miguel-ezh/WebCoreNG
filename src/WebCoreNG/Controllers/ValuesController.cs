@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebCore.DAL;
 
 namespace WebCoreNG.Controllers
 {
@@ -13,6 +14,8 @@ namespace WebCoreNG.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            var test = new Class1();
+
             return new string[] { "value1", "value2" };
         }
 

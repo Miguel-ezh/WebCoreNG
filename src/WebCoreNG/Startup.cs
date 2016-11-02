@@ -14,6 +14,7 @@ namespace WebCoreNG
     {
         public Startup(IHostingEnvironment env)
         {
+            //initial configurations
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
