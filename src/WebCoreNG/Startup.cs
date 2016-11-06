@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WebCoreNG.Dal;
 
 namespace WebCoreNG
 {
@@ -52,6 +53,9 @@ namespace WebCoreNG
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
+
+            //Manually database seed.
+            //DatabaseSeedData.Seed();
         }
     }
 }

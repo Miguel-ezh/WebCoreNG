@@ -24,6 +24,6 @@ namespace WebCoreNG.Dal.Entities
         public long AlexaRank { get; set; }
 
         [Required]
-        public DateTime RequestDate { get; set; }
+        public string Country { get; set; }
     }
 }

@@ -8,9 +8,10 @@ using WebCoreNG.Dal;
 namespace WebCoreNG.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class BloggingContextModelSnapshot : ModelSnapshot
+    [Migration("20161106031201_schema-v1")]
+    partial class schemav1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431");
@@ -25,9 +26,6 @@ namespace WebCoreNG.Migrations
                     b.Property<string>("CompanyName")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 100);
-
-                    b.Property<string>("Country")
-                        .IsRequired();
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -46,13 +44,13 @@ namespace WebCoreNG.Migrations
                 {
                     b.Property<string>("Id");
 
-                    b.Property<DateTime>("ExpireDate");
-
-                    b.Property<string>("Network")
+                    b.Property<string>("EmailSend")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 50);
 
-                    b.Property<string>("SentEmail")
+                    b.Property<DateTime>("ExpireDate");
+
+                    b.Property<string>("Network")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 50);
 

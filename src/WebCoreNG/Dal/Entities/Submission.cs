@@ -17,7 +17,7 @@ namespace WebCoreNG.Dal.Entities
 
         [Required]
         [StringLength(50)]
-        public string EmailSend { get; set; }
+        public string SentEmail { get; set; }
 
         [Required]
         public DateTime ExpireDate { get; set; }
