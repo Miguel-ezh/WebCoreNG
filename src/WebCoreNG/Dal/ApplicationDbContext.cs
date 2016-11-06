@@ -3,13 +3,16 @@ using WebCoreNG.Dal.Entities;
 
 namespace WebCoreNG.Dal
 {
-    public class BloggingContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         
-        public DbSet<TestTable> TestTable { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Filename=./my-database.db");
         }
+
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Submission> Submissions { get; set; }
+        public DbSet<SubmissionAccountLookup> SubmissionAccountLookups { get; set; }
     }
 }

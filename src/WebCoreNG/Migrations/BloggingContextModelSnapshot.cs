@@ -7,7 +7,7 @@ using WebCoreNG.Dal;
 
 namespace WebCoreNG.Migrations
 {
-    [DbContext(typeof(BloggingContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class BloggingContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

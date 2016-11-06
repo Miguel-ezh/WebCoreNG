@@ -7,7 +7,7 @@ using WebCoreNG.Dal;
 
 namespace WebCoreNG.Migrations
 {
-    [DbContext(typeof(BloggingContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20161102050322_FirstMigration")]
     partial class FirstMigration
     {
