@@ -52,7 +52,26 @@ namespace WebCoreNG
 
             app.UseApplicationInsightsExceptionTelemetry();
 
-            app.UseMvc();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+
+            app.UseApplicationInsightsExceptionTelemetry();
+
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             //Manually database seed.
             //DatabaseSeedData.Seed();
