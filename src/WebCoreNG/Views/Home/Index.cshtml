@@ -7,26 +7,11 @@
   <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
-        System.import('app/app.js');
+        System
+            .import('app/app.js')
+            .catch( console.error.bind(console) ); // make sure any errors print to console
     </script>
 }
+<div ui-view ng-cloak>
 
-<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-	<main class="mdl-layout__content">
-		<div class="mdl-card mdl-shadow--6dp">
-			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-				<h2 class="mdl-card__title-text">Acme Co.</h2>
-			</div>
-	  	    <div class="mdl-card__supporting-text">
-                Please confirm your email address to process the pending applications.
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="email" />
-                    <label class="mdl-textfield__label" for="email">Email Address</label>
-                </div>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Confirm</button>
-			</div>
-		</div>
-	</main>
 </div>
