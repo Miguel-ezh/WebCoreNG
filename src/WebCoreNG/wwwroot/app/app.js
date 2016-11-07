@@ -1,4 +1,5 @@
 import 'material-design-lite/material.css!'
+import 'animate.css/animate.css!'
 
 import 'material-design-lite'
 import angular from 'angular'

@@ -18,6 +18,7 @@ System.config({
     "angular-animate": "github:angular/bower-angular-animate@1.5.8",
     "angular-resource": "github:angular/bower-angular-resource@1.5.8",
     "angular-ui-router": "github:angular-ui/angular-ui-router-bower@0.3.2",
+    "animate.css": "npm:animate.css@3.5.2",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
